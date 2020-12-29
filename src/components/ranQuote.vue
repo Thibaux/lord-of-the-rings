@@ -89,6 +89,7 @@ export default {
 </script>
 
 <style scoped lang="css">
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 .Main {
     display: flex;
     flex-direction: column;
@@ -148,16 +149,16 @@ export default {
     justify-content: space-around;
 }
 
-.info h4 {
-    font-weight: 500;
-    font-size: 15px;
-    margin-bottom: 0.2rem;
-}
-
 .info h3 {
     margin-bottom: -0.1rem;
     font-weight: 800;
     font-size: 16px;
+}
+
+.info h4 {
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 0.2rem;
 }
 
 .actQuote {
@@ -184,10 +185,13 @@ export default {
 
 .actQuote p {
     display: inline;
-    font-family: url(./../assets/fonts/Shire.ttf);
+    font-family: 'Spirax', cursive;
     font-size: 35px;
     font-weight: 1000;
 }
+
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 960px) {
     .bgPic {
@@ -211,13 +215,7 @@ export default {
         width: 80vw;
         margin-left: 2%;
     }
-    .info h3 {
-        margin-bottom: -0.5rem;
-    }
 }
-
-
-/* MEDIA QUERIES */
 
 @media screen and (max-width: 500px) {
     .bgPic {
@@ -246,11 +244,15 @@ export default {
         font-weight: 800;
     }
     .title {
-        width: 18rem;
+        width: 15rem;
         margin-bottom: 2.5%;
+        margin-left: -0.1rem;
     }
     .title h2 {
         font-weight: 800;
+    }
+    .character {
+        margin-bottom: 0.5rem;
     }
 }
 </style>

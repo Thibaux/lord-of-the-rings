@@ -116,7 +116,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 * {
     padding: 0;
     margin: 0;
