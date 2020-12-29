@@ -193,11 +193,14 @@ export default {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1090px) {
     .bgPic {
-        width: 120vw;
+        width: 110vw;
         height: 290px;
     }
+}
+
+@media screen and (max-width: 960px) {
     .Main {
         width: 90vw;
         margin-left: 10vw;

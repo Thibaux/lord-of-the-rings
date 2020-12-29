@@ -406,7 +406,7 @@ export default {
         margin-left: 0.1rem;
     }
     .b2 .Info h4 {
-        margin-left: 1rem;
+        margin-right: -8rem;
     }
     .Info {
         width: 15rem;

@@ -155,27 +155,4 @@ export default {
 
 
 /* FILM POSTER */
-
-.bookCover {
-    margin-right: 1rem;
-}
-
-.bookCover img {
-    width: auto;
-    height: 350px;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-}
-
-.b2 .bookCover {
-    margin-left: 1rem;
-    margin-right: 0;
-}
-
-.b2 .bookCover img {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
 </style>

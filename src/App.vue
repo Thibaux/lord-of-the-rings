@@ -304,6 +304,17 @@ body {
     display: none;
 }
 
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1090px) {
+    #app {
+        width: 110vw;
+        min-height: 103vh;
+        stroke-linecap:
+    }
+}
+
 @media screen and (max-width: 960px) {
     .header {
         width: 110vw;
