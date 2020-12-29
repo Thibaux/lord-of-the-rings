@@ -64,12 +64,12 @@
                 <div class="name">&#169; Thibaux Swildens</div>
                 <div class="links">
                     <div class="github">
-                        <a href="https://github.com/Thibaux">
+                        <a target="_blank" href="https://github.com/Thibaux">
                             <img src="./assets/GitHub-Mark.png" alt="logo-github">
                         </a>
                     </div>
                     <div class="linkedIn">
-                        <a href="https://www.linkedin.com/in/thibaux-swildens-17ba80ba/">
+                        <a target="_blank" href="https://www.linkedin.com/in/thibaux-swildens-17ba80ba/">
                             <img src="./assets/linkedin-logo.png" alt="logo-linkedIn">
                         </a>
                     </div>
