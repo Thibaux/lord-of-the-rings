@@ -14,11 +14,11 @@
                 </div>
                 <div class="quote">
                     <div class="info">
-                        <div class="character">
+                        <div>
                             <h3>{{ quoteChar.docs[0].name }}</h3>
                             <h4>Character</h4>
                         </div>
-                        <div class="film">
+                        <div>
                             <h3>{{ quoteMovie.docs[0].name }}</h3>
                             <h4>Film</h4>
                         </div>
