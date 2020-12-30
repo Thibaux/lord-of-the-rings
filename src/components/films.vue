@@ -423,7 +423,7 @@ export default {
         }
     },
     beforeMount() {
-        // this.fetchFilms()
+        this.fetchFilms()
     },
     methods: {
         fetchFilms() {
@@ -432,7 +432,7 @@ export default {
                     this.res = response.data
                     this.setFilms()
                 })
-                // .catch(this.showErr);
+                .catch(this.showErr);
         },
         setFilms() {
             this.films = this.res.docs;
@@ -593,6 +593,7 @@ export default {
 .links a {
     width: 50px;
     height: 30px;
+    margin: 0.5rem;
 }
 
 .links img {
