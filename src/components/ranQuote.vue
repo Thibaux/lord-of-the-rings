@@ -22,6 +22,11 @@
                             <h3>{{ quoteMovie.docs[0].name }}</h3>
                             <h4>Film</h4>
                         </div>
+                        <div>
+                            <a href="location.reload();">
+                                <img class="animate__animated animate__rotateOut" src="./../assets/reload.png" alt="">
+                            </a>
+                        </div>
                     </div>
                     <div class="actQuote">
                         <p>{{ quote.dialog }}</p>
@@ -58,10 +63,13 @@ export default {
             HTTP.get(`quote?limit=2390`)
                 .then(response => {
                     this.quotes = response.data
-                        // if (this.quotes.docs.length == '0') { // console.log(this.quotes) // this.showErr = true; // } else { // this.setQuote() // }
+
                     this.setQuote()
                 })
-                // .catch(this.showErr = true);
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
         },
         randQuote() {
             this.randNum = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
@@ -159,6 +167,11 @@ export default {
     font-weight: 500;
     font-size: 15px;
     margin-bottom: 0.2rem;
+}
+
+.info img {
+    width: auto;
+    height: 50px;
 }
 
 .actQuote {

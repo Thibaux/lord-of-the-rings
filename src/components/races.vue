@@ -21,11 +21,27 @@ export default {
     data() {
         return {
             showErr: false,
+            tribes: {},
         }
     },
-    beforeMount() {},
+    beforeMount() {
+        // this.fetchTribes()
+    },
     methods: {
-
+        fetchTribes() {
+            HTTP.get(`races`)
+                .then(response => {
+                    this.res = response.data
+                    this.setTribes()
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
+        },
+        setTribes() {
+            this.tribes = this.res.docs;
+        },
     }
 };
 </script>

@@ -432,7 +432,10 @@ export default {
                     this.res = response.data
                     this.setFilms()
                 })
-                .catch(this.showErr);
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
         },
         setFilms() {
             this.films = this.res.docs;
