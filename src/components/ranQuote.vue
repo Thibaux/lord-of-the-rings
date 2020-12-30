@@ -7,10 +7,10 @@
                 <div class="title">
                     <h2>Random quote</h2>
                 </div>
-                <div class="showErr" v-show="showErr">
-                    <p>Sorry there was a problem with the API!</p>
+                <div v-show="showErr">
+                    <h3>Sorry there was a problem with the API!</h3>
                     <br>
-                    <p>Please try again later.</p>
+                    <h3>Please try again later.</h3>
                 </div>
                 <div class="quote">
                     <div class="info">
@@ -58,9 +58,10 @@ export default {
             HTTP.get(`quote?limit=2390`)
                 .then(response => {
                     this.quotes = response.data
+                        // if (this.quotes.docs.length == '0') { // console.log(this.quotes) // this.showErr = true; // } else { // this.setQuote() // }
                     this.setQuote()
                 })
-                .catch(this.showErr);
+                // .catch(this.showErr = true);
         },
         randQuote() {
             this.randNum = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
@@ -75,14 +76,14 @@ export default {
                 .then(response => {
                     this.quoteMovie = response.data
                 })
-                .catch(this.showErr);
+                // .catch(this.showErr = true);
         },
         fetchQuoteChar() {
             HTTP.get(`/character/${this.quote.character}`)
                 .then(response => {
                     this.quoteChar = response.data
                 })
-                .catch(this.showErr);
+                // .catch(this.showErr = true);
         }
     }
 };

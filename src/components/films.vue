@@ -67,6 +67,14 @@
                                 <p>Letterboxd rating</p>
                                 4.3
                             </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt0120737/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,6 +130,14 @@
                             <div class="lScore">
                                 <p>Letterboxd rating</p>
                                 4.3
+                            </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-lord-of-the-rings-the-two-towers/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt0167261/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -181,6 +197,14 @@
                                 <p>Letterboxd rating</p>
                                 4.4
                             </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-lord-of-the-rings-the-return-of-the-king/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt0167260/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,6 +260,14 @@
                             <div class="lScore">
                                 <p>Letterboxd rating</p>
                                 3.3
+                            </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-hobbit-an-unexpected-journey/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt0903624/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -295,6 +327,14 @@
                                 <p>Letterboxd rating</p>
                                 3.3
                             </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-hobbit-the-desolation-of-smaug/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt1170358/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -351,6 +391,14 @@
                                 <p>Letterboxd rating</p>
                                 3.1
                             </div>
+                            <div class="links">
+                                <a href="https://letterboxd.com/film/the-hobbit-the-battle-of-the-five-armies/">
+                                    <img src="./../assets/lb.png" alt="lb">
+                                </a>
+                                <a href="https://www.imdb.com/title/tt2310332/">
+                                    <img src="./../assets/imdb.png" alt="imdb">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -375,7 +423,7 @@ export default {
         }
     },
     beforeMount() {
-        this.fetchFilms()
+        // this.fetchFilms()
     },
     methods: {
         fetchFilms() {
@@ -384,7 +432,7 @@ export default {
                     this.res = response.data
                     this.setFilms()
                 })
-                .catch(this.showErr);
+                // .catch(this.showErr);
         },
         setFilms() {
             this.films = this.res.docs;
@@ -540,6 +588,16 @@ export default {
 .summary h5 {
     margin-bottom: 1rem;
     font-size: 16px;
+}
+
+.links a {
+    width: 50px;
+    height: 30px;
+}
+
+.links img {
+    width: auto;
+    height: 30px;
 }
 
 

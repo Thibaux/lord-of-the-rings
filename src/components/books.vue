@@ -123,8 +123,8 @@ export default {
         }
     },
     beforeMount() {
-        // this.reload() // this.fetchBooks()
-
+        this.reload()
+        this.fetchBooks()
     },
     methods: {
         reload() {
