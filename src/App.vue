@@ -27,8 +27,8 @@
                         </router-link>
                     </a>
                     <a href="#">
-                        <router-link to="/races">
-                            <div class="menu_item last">Races</div>
+                        <router-link to="/tribes">
+                            <div class="menu_item last">Tribes</div>
                         </router-link>
                     </a>
                 </div>
@@ -49,9 +49,9 @@
                                 Characters
                         </a>
                         </router-link>
-                        <router-link to="/races">
+                        <router-link to="/tribes">
                             <a href="#">
-                                Races
+                                Tribes
                         </a>
                         </router-link>
                     </Slide>

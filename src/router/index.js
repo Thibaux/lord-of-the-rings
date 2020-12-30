@@ -4,35 +4,30 @@ import RanQuote from '@/components/ranQuote'
 import Books from '@/components/books'
 import Films from '@/components/films'
 import Characters from '@/components/characters'
-import Races from '@/components/races'
+import Tribes from '@/components/races'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-      path: '/',
-      name: 'RanQuote',
-      component: RanQuote
-    },
-    {
-      path: '/books',
-      name: 'Books',
-      component: Books
-    },
-    {
-      path: '/films',
-      name: 'Films',
-      component: Films
-    },
-    {
-      path: '/characters',
-      name: 'Characters',
-      component: Characters
-    },
-    {
-      path: '/races',
-      name: 'Races',
-      component: Races
-    },
-  ]
+	routes: [{
+		path: '/',
+		name: 'RanQuote',
+		component: RanQuote
+	}, {
+		path: '/books',
+		name: 'Books',
+		component: Books
+	}, {
+		path: '/films',
+		name: 'Films',
+		component: Films
+	}, {
+		path: '/characters',
+		name: 'Characters',
+		component: Characters
+	}, {
+		path: '/tribes',
+		name: 'Tribes',
+		component: Tribes
+	}, ]
 })

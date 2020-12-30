@@ -1,85 +1,101 @@
 <template>
-    <div class="Books">
-        <div class="BooksTable">
-            <div class="container">
-                   <div class="title">
-                    <h3>Films</h3>
-                </div>
-                <div class="showErr" v-show="showErr">
-                    <p>Sorry there was a problem with the API!</p><br>
-                    <p>Please try again later.</p>
-                </div>
+    <div class="Characters">
+        <div class="title">
+            <h3>Characters</h3>
+        </div>
+        <div v-show="showErr">
+            <p>Sorry there was a problem with the API!</p>
+            <br>
+            <p>Please try again later.</p>
+        </div>
+        <div class="CharactersTable">
+            <div class="table">
+                <v-card>
+                    <v-card-title>
+                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
+                        <v-spacer></v-spacer>
+                    </v-card-title>
+                    <v-data-table :headers="headers" :items="characters" :items-per-page="20" class="elevation-1" :search="search"></v-data-table>
+                </v-card>
             </div>
         </div>
     </div>
 </template>
+
 <script>
+import { HTTP } from './../http-common';
+
 export default {
     name: 'Characters',
     data() {
         return {
-            api_key: process.env.API_KEY,
-            url_base: "https://the-one-api.dev/v2/",
             showErr: false,
+            characters: [],
+            search: '',
+            headers: [{
+                    text: 'Character',
+                    align: 'start',
+                    sortable: false,
+                    value: 'name',
+                },
+                { text: 'Height', value: 'height' },
+                { text: 'Race', value: 'race' },
+                { text: 'Gender', value: 'gender' },
+                { text: 'Birth', value: 'birth' },
+                { text: 'Spouse', value: 'spouse' },
+                { text: 'Death', value: 'death' },
+                { text: 'Realm', value: 'realm' },
+                { text: 'Hair', value: 'hair' },
+            ],
         }
     },
     beforeMount() {
+        this.fetchCharacters()
     },
     methods: {
-      
+        fetchCharacters() {
+            HTTP.get(`character`)
+                .then(response => {
+                    this.res = response.data
+                    this.setChars()
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
+        },
+        setChars() {
+            this.characters = this.res.docs;
+        },
     }
-}
+};
 </script>
+
 <style lang="css" scoped>
-.BooksTable {
+.Characters {
     display: flex;
     flex-direction: column;
-    background-color: #BBBBBB;
-    height: auto;
+    background-color: rgba(187, 187, 187, .6);
     width: 90%;
-    border: 1px solid black;
     margin-top: 2.5rem;
     align-items: center;
     border-radius: 4px;
     margin-bottom: 2rem;
+    position: relative;
 }
 
-.container {
-    width: 100%;
-    margin: 2rem;
+.title {
+    width: 5rem;
+    margin-top: 1.5rem;
+    margin-right: 5rem;
 }
 
-.books {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-
-.title h3 {
-    font-weight: 900;
+.title h2 {
+    font-weight: 1000;
     margin-top: -0.5rem;
-
 }
 
-.book {
-    background-color: #888888;
-    padding: 0rem 2rem;
-    border-radius: 4px;
-}
-
-.book h4 {
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.book p {
-    text-align: left;
-}
-
-.book p {
-    font-size: 12px;
-
+.CharactersTable {
+    margin: 1rem;
 }
 </style>
