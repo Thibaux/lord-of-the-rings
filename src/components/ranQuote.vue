@@ -96,7 +96,6 @@ export default {
     background-color: rgba(187, 187, 187);
     width: 70vw;
     margin-left: 15vw;
-    border: 1px solid black;
     margin-top: -8rem;
     margin-bottom: 2rem;
     align-items: center;

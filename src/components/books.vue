@@ -123,8 +123,8 @@ export default {
         }
     },
     beforeMount() {
-        this.reload()
-        this.fetchBooks()
+        // this.reload() // this.fetchBooks()
+
     },
     methods: {
         reload() {
@@ -159,13 +159,12 @@ export default {
 };
 </script>
 
-<style scoped lang="css">
+<style scoped lang="css" scoped>
 .main {
     display: flex;
     flex-direction: column;
     background-color: rgba(187, 187, 187, .6);
     width: 70%;
-    border: 1px solid black;
     margin-top: 2.5rem;
     align-items: center;
     border-radius: 4px;
