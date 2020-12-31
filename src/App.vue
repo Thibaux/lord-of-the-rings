@@ -210,8 +210,7 @@ body {
 }
 
 .menu a {
-    tr
-ansition: all 1s;
+    transition: all 1s;
 }
 
 .menu a:after {
