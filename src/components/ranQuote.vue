@@ -22,9 +22,14 @@
                             <h3>{{ quoteMovie.docs[0].name }}</h3>
                             <h4>Film</h4>
                         </div>
-                        <div>
-                            <a href="location.reload();">
+                        <!--   <div>
+                            <a href="https://lord-of-the-rings.netlify.app">
                                 <img class="animate__animated animate__rotateOut" src="./../assets/reload.png" alt="">
+                            </a>
+                        </div> -->
+                        <div>
+                            <a href="location.reload()" @click="relaodQuote()">
+                                <img class="reloadIcon" :class="{ clicked: reloadIcon }" src="./../assets/reload.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -52,6 +57,7 @@ export default {
             max: 2390,
             quoteMovie: '',
             quoteChar: '',
+            reloadIcon: false,
         }
     },
     beforeMount() {
@@ -84,14 +90,23 @@ export default {
                 .then(response => {
                     this.quoteMovie = response.data
                 })
-                // .catch(this.showErr = true);
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
         },
         fetchQuoteChar() {
             HTTP.get(`/character/${this.quote.character}`)
                 .then(response => {
                     this.quoteChar = response.data
                 })
-                // .catch(this.showErr = true);
+                .catch(error => {
+                    console.log(error)
+                    this.showErr = true
+                })
+        },
+        relaodQuote() {
+            this.reloadIcon = true
         }
     }
 };
@@ -172,6 +187,17 @@ export default {
 .info img {
     width: auto;
     height: 50px;
+}
+
+.reloadIcon {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.clicked {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
 }
 
 .actQuote {
