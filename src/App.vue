@@ -26,11 +26,6 @@
                             <div class="menu_item">Characters</div>
                         </router-link>
                     </a>
-                    <a href="#">
-                        <router-link to="/tribes">
-                            <div class="menu_item last">Tribes</div>
-                        </router-link>
-                    </a>
                 </div>
                 <div class="mobileMenu" v-else="wide === false">
                     <Slide class="mobile_Menu" right :closeOnNavigation="true" :crossIcon="false" width="150">
@@ -47,11 +42,6 @@
                         <router-link to="/characters">
                             <a href="#">
                                 Characters
-                        </a>
-                        </router-link>
-                        <router-link to="/tribes">
-                            <a href="#">
-                                Tribes
                         </a>
                         </router-link>
                     </Slide>
@@ -220,7 +210,8 @@ body {
 }
 
 .menu a {
-    transition: all 1s;
+    tr
+ansition: all 1s;
 }
 
 .menu a:after {

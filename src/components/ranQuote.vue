@@ -22,13 +22,8 @@
                             <h3>{{ quoteMovie.docs[0].name }}</h3>
                             <h4>Film</h4>
                         </div>
-                        <!--   <div>
-                            <a href="https://lord-of-the-rings.netlify.app">
-                                <img class="animate__animated animate__rotateOut" src="./../assets/reload.png" alt="">
-                            </a>
-                        </div> -->
                         <div>
-                            <a href="location.reload()" @click="relaodQuote()">
+                            <a href="https://lord-of-the-rings.netlify.app" @click="relaodQuote()">
                                 <img class="reloadIcon" :class="{ clicked: reloadIcon }" src="./../assets/reload.png" alt="">
                             </a>
                         </div>

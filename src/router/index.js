@@ -4,7 +4,6 @@ import RanQuote from '@/components/ranQuote'
 import Books from '@/components/books'
 import Films from '@/components/films'
 import Characters from '@/components/characters'
-import Tribes from '@/components/races'
 
 Vue.use(Router)
 
@@ -25,9 +24,5 @@ export default new Router({
 		path: '/characters',
 		name: 'Characters',
 		component: Characters
-	}, {
-		path: '/tribes',
-		name: 'Tribes',
-		component: Tribes
 	}, ]
 })
